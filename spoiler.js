@@ -37,8 +37,13 @@ by the user as a boolean*/
 function checkInputParameterValidity(inputParameters){
     //if two parameters are entered as input
     if(inputParameters.length >= 2){
-        if (!isNaN(inputParameters[inputParameters.length - 1]) && isNaN(inputParameters[0])) {
-            return true;
+        if (!isNaN(inputParameters[inputParameters.length-1]) && isNaN(inputParameters[0])) {
+            if(inputParameters[inputParameters.length-1] < 0){
+                console.log("You entered a negative value for the time");
+                return false;
+            }
+            else
+                return true;
         }
         else if (!isNaN(inputParameters[0])) {
             console.log("Enter Movie Title followed by Spoiler Time");
