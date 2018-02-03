@@ -15,7 +15,6 @@ else {
 }
 //invoking the function that contains the main program
 //message to the console prompting the user the reattempt if the input was invaid
-
 function sortInformation(inputParameters){
     let sortedInfo = {}; //creating empty object that will store information about object
     let movieTitle = "";
@@ -38,7 +37,7 @@ by the user as a boolean*/
 function checkInputParameterValidity(inputParameters){
     //if two parameters are entered as input
     if(inputParameters.length >= 2){
-        if (!isNaN(inputParameters[inputParameters.length - 1])) {
+        if (!isNaN(inputParameters[inputParameters.length - 1]) && isNaN(inputParameters[0])) {
             return true;
         }
         else if (!isNaN(inputParameters[0])) {
